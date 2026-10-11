@@ -54,15 +54,14 @@ def test_get_nth_fibonacci_zero():
 
 def test_get_nth_fibonacci_one():
     """Test with n=1."""
-    # Arrange
+    Arrange
     n = 1
 
-    # Act
+    Act
     result = get_nth_fibonacci(n)
 
-    # Assert
-    assert result == 1
-
+    Assert
+    assert result == 10
 
 def test_get_nth_fibonacci_negative():
     """Test that a negative index is rejected."""
