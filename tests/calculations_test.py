@@ -54,21 +54,22 @@ def test_get_nth_fibonacci_zero():
 
 def test_get_nth_fibonacci_one():
     """Test with n=1."""
-    Arrange
-    n = 1
+    assert get_nth_fibonacci(1) == 1
 
-    Act
+
+def test_get_nth_fibonacci_ten():
+    """Test with n=10."""
+    # Arrange
+    n = 10
+
+    # Act
     result = get_nth_fibonacci(n)
 
-    Assert
-    assert result == 10
+    # Assert
+    assert result == 55
+
 
 def test_get_nth_fibonacci_negative():
     """Test that a negative index is rejected."""
     with pytest.raises(ValueError, match="n cannot be negative"):
         get_nth_fibonacci(-1)
-
-
-def test_get_nth_fibonacci_ten():
-    """Test the iterative calculation with n=10."""
-    assert get_nth_fibonacci(10) == 55
